@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 @font-face {
 	font-family: vcr_font;
-	src: url(font/VCR_OSD_MONO_1.001.ttf) format('truetype');
+	src: url(font/roboto-Regular.ttf) format('truetype');
 }
 * {
 	margin: 0;
@@ -68,7 +68,7 @@ body {
 }
 .head p,
 .head span {
-	font-family: 'Amatic SC', cursive;
+	font-family: 'vcr_font', cursive;
 	color: white;
 	font-size: 26px;
 	font-weight: 700;
@@ -86,7 +86,7 @@ h1 {
 	margin-top: 10px;
 }
 .head button {
-	font-family: 'Amatic SC', cursive;
+	font-family: 'vcr_font', cursive;
 	color: white;
 	border-radius: 5px;
 	padding: 0 20px;
@@ -121,19 +121,19 @@ h1 {
 	flex-direction: column;
 }
 .modal h2 {
-	font-family: 'Amatic SC', cursive;
+	font-family: 'vcr_font', cursive;
 	color: red;
 	font-weight: 700;
 	font-size: 45px;
 }
 .modal p {
-	font-family: 'Amatic SC', cursive;
+	font-family: 'vcr_font', cursive;
 	font-weight: 700;
 	font-size: 22px;
 	color: black;
 }
 .modal span {
-	font-family: 'Amatic SC', cursive;
+	font-family: 'vcr_font', cursive;
 	font-weight: 700;
 	color: red;
 }

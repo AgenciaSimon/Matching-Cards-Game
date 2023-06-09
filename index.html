@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Matching Game</title>
 		<link rel="stylesheet" href="style.css" />
-		<link rel="shortcut icon" href="images/logo.png" />
+		<link rel="shortcut icon" href="#" type="image/x-icon">
 	</head>
 	<body>
 		<div class="container">
 			<div class="title">
-				<h1>Matching Game</h1>
+				<h1>Juego de cartas</h1>
 			</div>
 
 			<div class="head">
-				<p>Moves: <span class="Moves">0</span></p>
-				<p class="timer">Time: <span id="countdown">1:00</span></p>
-				<button type="button" class="restert">Restert</button>
+				<p>Movimientos: <span class="Moves">0</span></p>
+				<p style="margin-left: 10px;" class="timer">Tiempo: <span id="countdown">1:00</span></p>
+				<button type="button" class="restert">Reintentar</button>
 			</div>
 			<div class="memory-game">
 				<!--1-->
@@ -83,20 +82,19 @@
 			</div>
 		</div>
 		<div class="modal visibilty">
-			<div><h2>Congratulations</h2></div>
+			<div><h2>Felicidades</h2></div>
 			<div>
 				<p>
-					You completed this game in <span class="move-model"></span> moves and
-					<span class="second-model"></span> seconds
+					Completaste el juego en <span class="move-model"></span> movimientos y en
+					<span class="second-model"></span> segundos
 				</p>
 			</div>
 		</div>
 		<div class="modal GameOver visibilty">
-			<div><h2>Game Over</h2></div>
-			<div><p>Time is over</p></div>
+			<div><h2>Se acabó el tiempo</h2></div>
+			<div><p>Intentalo de nuevo</p></div>
 		</div>
 		<div class="overlay visibilty"></div>
-		
 
 		<script src="script.js"></script>
 	</body>

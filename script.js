@@ -16,15 +16,23 @@ let firstCard ,secondCard;
 let firstbackface,secondbackface;
 let randomPos;
 let movesCount=0;
+// minutos de juego
 let startingMinuts=1;
 let time=startingMinuts * 60;
 let interval;
 let correct=0;
+// audios
 const startAudio= new Audio ('audio/audiostart.mp3');
 const matchAudio= new Audio ('audio/match.mp3');
 const loseAudio= new Audio ('audio/lose.mp3');
 const winnAudio= new Audio ('audio/winn.mp3');
 const musicAudio= new Audio ('audio/music.mp3');
+
+// settings
+
+document.title  = "Papá mi dupla ideal";
+document.querySelector("link[rel='shortcut icon']").href = "images/logo.png";
+
 
 /********Functions********/
 
