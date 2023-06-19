@@ -9,9 +9,61 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+  }
+
+  .col {
+	position: relative;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+  }
+
+  @media (min-width: 576px) {
+	.col {
+	  flex: 0 0 50%;
+	  max-width: 50%;
+	}
+	.col-2 {
+		max-width: none !important;
+	  }
+  }
+
+  @media (min-width: 768px) {
+	.col {
+	  flex: 0 0 33.333333%;
+	  max-width: 33.333333%;
+	}
+	.col-2 {
+		max-width: none !important;
+	  }
+  }
+
+  @media (min-width: 992px) {
+	.col {
+	  flex: 0 0 25%;
+	  max-width: 25%;
+	}
+	.col-2 {
+		max-width: none !important;
+	  }
+  }
+
+  @media (min-width: 1200px) {
+	.col {
+	  flex: 0 0 20%;
+	  max-width: 20%;
+	}
+	.col-2 {
+		max-width: none !important;
+	  }
+  }
 
 body {
-	height: 100vh;
 	background: url(images/background.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -35,23 +87,27 @@ body {
 	height: calc(33.33% - 10px);
 	position: relative;
 	margin: 5px;
-	background: rgba(255, 255, 255, 0.9);
+	background: rgba(255, 255, 255, 1);
 	border-radius: 5px;
 	transform: scale(1);
 	transform-style: preserve-3d;
 	transition: transform 0.5s;
 }
+
 .frontface,
 .backface {
 	width: 100%;
-	height: 80%;
+	height: 100%;
 	position: absolute;
-	padding: 10px;
 	backface-visibility: hidden;
 }
 .memory-card:active {
 	transform: scale(0.97);
 	transition: transform 0.2s;
+}
+.frontface {
+	height: 70%!important;
+	margin-top: 20px;
 }
 .memory-card.flip {
 	transform: rotateY(180deg);
@@ -68,16 +124,16 @@ body {
 }
 .head p,
 .head span {
-	font-family: 'vcr_font', cursive;
+	font-family: sans-serif;
 	color: white;
 	font-size: 26px;
 	font-weight: 700;
 }
 
 h1 {
-	color: red;
-	font-family: vcr_font;
-	font-weight: 500;
+	color: white;
+	font-family: sans-serif;
+	font-weight: 800;
 	font-size: 35px;
 }
 .title {
@@ -86,7 +142,7 @@ h1 {
 	margin-top: 10px;
 }
 .head button {
-	font-family: 'vcr_font', cursive;
+	font-family: sans-serif;
 	color: white;
 	border-radius: 5px;
 	padding: 0 20px;
@@ -95,10 +151,6 @@ h1 {
 	border: 2px solid white;
 	font-weight: 700;
 	margin-left: 200px;
-}
-.head button:hover {
-	color: red;
-	border: 2px solid red;
 }
 .visibilty {
 	visibility: hidden;
@@ -109,7 +161,7 @@ h1 {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 40%;
-	height: 40%;
+	height: 45%;
 	background: rgba(255, 255, 255, 1);
 	padding: 6rem;
 	border-radius: 5px;
@@ -121,20 +173,24 @@ h1 {
 	flex-direction: column;
 }
 .modal h2 {
-	font-family: 'vcr_font', cursive;
-	color: red;
+	font-family: sans-serif, cursive;
+	color:red;
+	text-align: center;
 	font-weight: 700;
 	font-size: 45px;
 }
 .modal p {
-	font-family: 'vcr_font', cursive;
+	font-family: sans-serif, cursive;
 	font-weight: 700;
 	font-size: 22px;
+	text-align: center;
 	color: black;
 }
 .modal span {
-	font-family: 'vcr_font', cursive;
+	font-family: sans-serif, cursive;
 	font-weight: 700;
+	text-align: center;
+
 	color: red;
 }
 
@@ -182,8 +238,8 @@ h1 {
 		font-size: 10px;
 	}
 	.modal {
-		width: 30%;
-		height: 15%;
+		width: 40%;
+		height: 25%;
 	}
 }
 @media only screen and (max-width: 570px) {
@@ -210,8 +266,8 @@ h1 {
 		font-size: 30px;
 	}
 	.modal {
-		width: 40%;
-		height: 10%;
+		width: 50%;
+		height: 20%;
 	}
 	.modal h2 {
 		font-size: 16px;
@@ -236,7 +292,7 @@ h1 {
 	}
 	.modal {
 		width: 60%;
-		height: 20%;
+		height: 30%;
 	}
 	.modal h2 {
 		font-size: 15px;

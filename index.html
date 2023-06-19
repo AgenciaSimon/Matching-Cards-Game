@@ -1,101 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<link rel="shortcut icon" href="#" type="image/x-icon">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="shortcut icon" href="#" type="image/x-icon">
 	</head>
-	<body>
-		<div class="container">
-			<div class="title">
-				<h1>Juego de cartas</h1>
-			</div>
 
-			<div class="head">
-				<p>Movimientos: <span class="Moves">0</span></p>
-				<p style="margin-left: 10px;" class="timer">Tiempo: <span id="countdown">1:00</span></p>
-				<button type="button" class="restert">Reintentar</button>
-			</div>
-			<div class="memory-game">
-				<!--1-->
-				<div class="memory-card">
-					<img src="images/logo.png" alt="frontface" class="frontface" />
-					<img src="images/among-1.png" alt="backface" class="backface" />
-				</div>
-				<!--2-->
-				<div class="memory-card">
-					<img src="images/logo.png" alt="frontface" class="frontface" />
-					<img src="images/among-1.png" alt="backface" class="backface" />
-				</div>
-				<!--3-->
-				<div class="memory-card">
-					<img src="images/logo.png" alt="frontface" class="frontface" />
-					<img src="images/among-2.png" alt="backface" class="backface" />
-				</div>
-				<!--4-->
-				<div class="memory-card">
-					<img src="images/logo.png" alt="frontface" class="frontface" />
-					<img src="images/among-2.png" alt="backface" class="backface" />
-				</div>
-				<!--5-->
-				<div class="memory-card">
-					<img src="images/logo.png" alt="frontface" class="frontface" />
-					<img src="images/among-3.png" alt="backface" class="backface" />
-				</div>
-				<!--6-->
-				<div class="memory-card">
-					<img src="images/logo.png" alt="frontface" class="frontface" />
-					<img src="images/among-3.png" alt="backface" class="backface" />
-				</div>
-				<!--7-->
-				<div class="memory-card">
-					<img src="images/logo.png" alt="frontface" class="frontface" />
-					<img src="images/among-4.png" alt="backface" class="backface" />
-				</div>
-				<!--8-->
-				<div class="memory-card">
-					<img src="images/logo.png" alt="frontface" class="frontface" />
-					<img src="images/among-4.png" alt="backface" class="backface" />
-				</div>
-				<!--9-->
-				<div class="memory-card">
-					<img src="images/logo.png" alt="frontface" class="frontface" />
-					<img src="images/among-5.png" alt="backface" class="backface" />
-				</div>
-				<!--10-->
-				<div class="memory-card">
-					<img src="images/logo.png" alt="frontface" class="frontface" />
-					<img src="images/among-5.png" alt="backface" class="backface" />
-				</div>
-				<!--11-->
-				<div class="memory-card">
-					<img src="images/logo.png" alt="frontface" class="frontface" />
-					<img src="images/among-6.png" alt="backface" class="backface" />
-				</div>
-				<!--12-->
-				<div class="memory-card">
-					<img src="images/logo.png" alt="frontface" class="frontface" />
-					<img src="images/among-6.png" alt="backface" class="backface" />
-				</div>
-			</div>
+<body>
+	<div class="container"">
+		<div class="container" style="text-align: center;">
+			<img src="images/banner-logos.png" style="width: 40%; margin-top: 20px; margin-bottom:20px" alt="logo dia del padre">
+					<h1 style="text-align: center;">DIA DEL PADRE LEE</h1>
+					<h3 style="color: yellow;text-align: center; font-family: sans-serif; font-weight: 800;">Busca los pares
+					</h3>
 		</div>
-		<div class="modal visibilty">
-			<div><h2>Felicidades</h2></div>
-			<div>
-				<p>
-					Completaste el juego en <span class="move-model"></span> movimientos y en
-					<span class="second-model"></span> segundos
-				</p>
+		<div class="head">
+			<p>Movimientos: <span class="Moves">0</span></p>
+			<p style="margin-left: 10px;" class="timer">Tiempo: <span id="countdown">1:00</span></p>
+			<button style="display: none;" type="button" class="restert">Reintentar</button>
+		</div>
+		<div class="memory-game">
+			<!--1-->
+			<div class="memory-card">
+				<img src="images/logo.png" alt="frontface" class="frontface" />
+				<img src="images/card-1.png" alt="backface" class="backface" />
+			</div>
+			<!--2-->
+			<div class="memory-card">
+				<img src="images/logo.png" alt="frontface" class="frontface" />
+				<img src="images/card-1.png" alt="backface" class="backface" />
+			</div>
+			<!--3-->
+			<div class="memory-card">
+				<img src="images/logo.png" alt="frontface" class="frontface" />
+				<img src="images/card-2.png" alt="backface" class="backface" />
+			</div>
+			<!--4-->
+			<div class="memory-card">
+				<img src="images/logo.png" alt="frontface" class="frontface" />
+				<img src="images/card-2.png" alt="backface" class="backface" />
+			</div>
+			<!--5-->
+			<div class="memory-card">
+				<img src="images/logo.png" alt="frontface" class="frontface" />
+				<img src="images/card-3.png" alt="backface" class="backface" />
+			</div>
+			<!--6-->
+			<div class="memory-card">
+				<img src="images/logo.png" alt="frontface" class="frontface" />
+				<img src="images/card-3.png" alt="backface" class="backface" />
+			</div>
+			<!--7-->
+			<div class="memory-card">
+				<img src="images/logo.png" alt="frontface" class="frontface" />
+				<img src="images/card-4.png" alt="backface" class="backface" />
+			</div>
+			<!--8-->
+			<div class="memory-card">
+				<img src="images/logo.png" alt="frontface" class="frontface" />
+				<img src="images/card-4.png" alt="backface" class="backface" />
+			</div>
+			<!--9-->
+			<div class="memory-card">
+				<img src="images/logo.png" alt="frontface" class="frontface" />
+				<img src="images/card-5.png" alt="backface" class="backface" />
+			</div>
+			<!--10-->
+			<div class="memory-card">
+				<img src="images/logo.png" alt="frontface" class="frontface" />
+				<img src="images/card-5.png" alt="backface" class="backface" />
+			</div>
+			<!--11-->
+			<div class="memory-card">
+				<img src="images/logo.png" alt="frontface" class="frontface" />
+				<img src="images/card-6.png" alt="backface" class="backface" />
+			</div>
+			<!--12-->
+			<div class="memory-card">
+				<img src="images/logo.png" alt="frontface" class="frontface" />
+				<img src="images/card-6.png" alt="backface" class="backface" />
 			</div>
 		</div>
-		<div class="modal GameOver visibilty">
-			<div><h2>Se acabó el tiempo</h2></div>
-			<div><p>Intentalo de nuevo</p></div>
-		</div>
-		<div class="overlay visibilty"></div>
+	</div>
+	<div class="modal visibilty" style="text-align: center;">
+					<img src="images/banner-logos.png" style="width: 40%;filter: grayscale(100%);-webkit-filter: grayscale(100%); filter: invert(1);margin-bottom:10px" alt="logo dia del padre">
 
-		<script src="script.js"></script>
-	</body>
+		<div>
+			<h2>Felicidades</h2>
+		</div>
+		<div>
+			<p>
+				Completaste el juego en <span class="move-model"></span> movimientos y en
+				<span class="second-model"></span> segundos
+			</p>
+		</div>
+		<p style="color: darkslategrey;">
+			TOMA UNA CAPTURA DE PANTALLA
+		</p>
+	</div>
+	<div class="modal GameOver visibilty" style="text-align: center;">
+					<img src="images/banner-logos.png" style="width: 40%;filter: grayscale(100%);-webkit-filter: grayscale(100%); filter: invert(1);margin-bottom:10px" alt="logo dia del padre">
+
+		<div>
+			<h2>Se acabó el tiempo</h2>
+		</div>
+		<div>
+			<p>Intentalo de nuevo</p>
+		</div>
+	</div>
+	<div class="overlay visibilty"></div>
+
+	<script src="script.js"></script>
+</body>
+
 </html>

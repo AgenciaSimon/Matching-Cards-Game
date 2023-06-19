@@ -1,4 +1,3 @@
-
 const cards=document.querySelectorAll('.memory-card ');
 const backcards= document.querySelectorAll('.backface');
 const restertbtn=document.querySelector('.restert');
@@ -22,11 +21,11 @@ let time=startingMinuts * 60;
 let interval;
 let correct=0;
 // audios
-const startAudio= new Audio ('audio/audiostart.mp3');
-const matchAudio= new Audio ('audio/match.mp3');
-const loseAudio= new Audio ('audio/lose.mp3');
-const winnAudio= new Audio ('audio/winn.mp3');
-const musicAudio= new Audio ('audio/music.mp3');
+const startAudio= new Audio ('audio/audiofstart.mp3');
+const matchAudio= new Audio ('audio/matcfh.mp3');
+const loseAudio= new Audio ('audio/losfe.mp3');
+const winnAudio= new Audio ('audio/winfn.mp3');
+const musicAudio= new Audio ('audio/mf                                                          usic.mp3');
 
 // settings
 
@@ -47,20 +46,20 @@ function startGame(){
         cardd.classList.remove('flip');
         },1000);
     });
-    
+
 }
 
 const closeModel=function(){
-    model.classList.add('visibilty');  
-    overly.classList.add('visibilty'); 
+    model.classList.add('visibilty');
+    overly.classList.add('visibilty');
     gameOverModel.classList.add('visibilty');
     location.reload();
-    
+
 
 }
 const openModel=function(){
-     model.classList.remove('visibilty'); 
-     overly.classList.remove('visibilty'); 
+     model.classList.remove('visibilty');
+     overly.classList.remove('visibilty');
      MovesModel.textContent=movesCount;
     secondModel.textContent=countdown.textContent;
 }
@@ -74,16 +73,16 @@ function startTimer(){
     let timeover=`${minutes}:${seconds}`;
     countdown.innerHTML=timeover
     time--;
-    
+
     if(timeover==='0:00'){
         musicAudio.pause();
         loseAudio.play();
        gameOverModel.classList.remove('visibilty');
-       overly.classList.remove('visibilty'); 
+       overly.classList.remove('visibilty');
        clearInterval(interval);
        correct=0;
     }
-    
+
 }
 function resetBoard(){
     [hasFlipedCard,lockBoard]=[false,false];
@@ -92,7 +91,7 @@ function resetBoard(){
 }
 
 function checkforMatch(){
-  //check cards 
+  //check cards
     if(firstbackface.src===secondbackface.src){
         setTimeout(()=>{
         matchAudio.play();
@@ -109,7 +108,7 @@ function checkforMatch(){
          secondCard.classList.remove('flip');
          resetBoard();
         },1500);
-       
+
     }
 }
 /*******Shuffle Function*******/
@@ -118,17 +117,17 @@ function checkforMatch(){
         setTimeout(()=>{
         startAudio.pause();
          musicAudio.play();
-        },4500); 
-       
+        },4500);
+
     startGame();
     cards.forEach(card =>{
-     randomPos=Math.trunc(Math.random()*12) ; 
+     randomPos=Math.trunc(Math.random()*12) ;
     card.style.order=randomPos;  // the order of item flex(container should be flex) });
 });
 interval=setInterval(startTimer,900);
 
  })();  // (function)(); imediatly invoked expression
- 
+
 
  /********Moved Count********/
  function countMoved(){
@@ -140,12 +139,12 @@ overly.addEventListener('click',closeModel);
  /***********Restert Button**********/
 restertbtn.addEventListener('click',function(){
    location.reload();
-   
-    
-   
+
+
+
  });
- document.addEventListener('keydown',function(e){    
-   if((e.key==='Escape')&&(!model.classList.contains('hidden'))){    
+ document.addEventListener('keydown',function(e){
+   if((e.key==='Escape')&&(!model.classList.contains('hidden'))){
        closeModel();
    }
 });
@@ -164,7 +163,7 @@ for(let i=0 ;i<=cards.length;i++){
         //first click
         hasFlipedCard=true;
         firstCard=this;
-        firstbackface=backcards[i]; 
+        firstbackface=backcards[i];
     }
     else{
         //second click
@@ -175,19 +174,19 @@ for(let i=0 ;i<=cards.length;i++){
     }
     countMoved();
     if(correct==6){
-        
+
         setTimeout(()=>{
         clearInterval(interval);
         musicAudio.pause();
         winnAudio.play();
         openModel();
         correct=0;
-        },900);  
+        },900);
     }
-     
+
     });
 }
 
 
- 
-   
+
+
